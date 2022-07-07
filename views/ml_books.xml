@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ml_books_tree_view" model="ir.ui.view">
+            <field name="name">ml.books.tree.view</field>
+            <field name="model">ml.books</field>
+            <field name="arch" type="xml">
+                <tree string="Sách" default_order="create_date desc">
+                    <field name="name"/>
+                    <field name="author"/>
+                    <field name="year"/>
+                    <field name="publishing_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ml_books_form_view" model="ir.ui.view">
+            <field name="name">ml.books.form.view</field>
+            <field name="model">ml.books</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin sách">
+<!--                    <group>-->
+                        <field name="name"/>
+                        <field name="author"/>
+                        <field name="year"/>
+                        <field name="publishing_company"/>
+<!--                    </group>-->
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ml_books" model="ir.actions.act_window">
+            <field name="name">Sách</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ml.books</field>
+        </record>
+    </data>
+</odoo>

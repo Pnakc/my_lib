@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="ml_management_menuroot" name="Quản lý thư viện" sequence="5"/>
+        <menuitem id="menu_ml_books" name="Sách" action="action_ml_books" parent="ml_management_menuroot"
+                  sequence="27"/>
+    </data>
+</odoo>

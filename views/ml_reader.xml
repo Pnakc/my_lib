@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ml_reader_tree_view" model="ir.ui.view">
+            <field name="name">ml.reader.tree.view</field>
+            <field name="model">ml.reader</field>
+            <field name="arch" type="xml">
+                <tree string="Độc giả" default_order="create_date desc">
+                    <field name="reader_id"/>
+                    <field name="name"/>
+<!--                    <field name="warning"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="ml_reader_form_view" model="ir.ui.view">
+            <field name="name">ml.reader.form.view</field>
+            <field name="model">ml.reader</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin độc giả">
+                    <group>
+                        <field name="reader_id"/>
+                        <field name="name"/>
+                        <field name="date_birth"/>
+                        <field name="ccid"/>
+                        <field name="phone"/>
+                        <field name="address"/>
+                        <field name="time"/>
+                        <field name="warning_card"/>
+<!--                        <field name="history"/>-->
+                    </group>
+
+                    <group>
+                        <field name="history_ids">
+                            <tree editable="bottom">
+                                <field name="book_id"/>
+                                <field name="name"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="date_real"/>
+                                <field name="warning"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ml_reader" model="ir.actions.act_window">
+            <field name="name">Độc giả</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ml.reader</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ml_publisher_tree_view" model="ir.ui.view">
+            <field name="name">ml.publisher.tree.view</field>
+            <field name="model">ml.publisher</field>
+            <field name="arch" type="xml">
+                <tree string="Nhà xuất bản" default_order="create_date desc">
+                    <field name="publisher_id"/>
+                    <field name="name"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ml_publisher_form_view" model="ir.ui.view">
+            <field name="name">ml.publisher.form.view</field>
+            <field name="model">ml.publisher</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin nhà xuất bản">
+                    <sheet>
+                        <group>
+                            <field name="publisher_id"/>
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="address"/>
+                            <field name="book"/>
+                        </group>
+                        <group>
+                            <field name="publisher_pic" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ml_publisher" model="ir.actions.act_window">
+            <field name="name">Nhà xuất bản</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ml.publisher</field>
+        </record>
+    </data>
+</odoo>

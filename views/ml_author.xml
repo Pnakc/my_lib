@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ml_author_tree_view" model="ir.ui.view">
+            <field name="name">ml.author.tree.view</field>
+            <field name="model">ml.author</field>
+            <field name="arch" type="xml">
+
+                <tree string="Tác giả" default_order="create_date desc">
+                    <field name="author_id"/>
+                    <field name="name"/>
+                    <field name="country"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record id="ml_author_form_view" model="ir.ui.view">
+            <field name="name">ml.author.form.view</field>
+            <field name="model">ml.author</field>
+            <field name="arch" type="xml">
+                <form string="Thông tin tác giả">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="author_id"/>
+                                <field name="name"/>
+                                <field name="date_birth"/>
+                                <field name="date_death"/>
+                                <field name="country"/>
+                                <field name="achievement"/>
+                                <field name="book"/>
+                            </group>
+                            <group>
+                                <field name="author_pic" widget="image"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ml_author" model="ir.actions.act_window">
+            <field name="name">Tác giả</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ml.author</field>
+        </record>
+    </data>
+</odoo>

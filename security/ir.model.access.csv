@@ -1,1 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_model_ml_author_staff,access_model_ml_author_staff,model_ml_author,group_staff,1,1,1,1
+access_model_ml_books_staff,access_model_ml_books_staff,model_ml_books,group_staff,1,1,1,1
+access_model_ml_publisher_staff,access_model_ml_publisher_staff,model_ml_publisher,group_staff,1,1,1,1
+access_model_ml_reader_staff,access_model_ml_reader_staff,model_ml_read,group_staff,1,1,1,1
+,,,,,,,
+access_model_ml_author_reader,access_model_ml_author_reader,model_ml_author,group_reader,1,0,0,0
+access_model_ml_books_reader,access_model_ml_books_reader,model_ml_books,group_reader,1,0,0,0
+access_model_ml_publisher_reader,access_model_ml_publisher_reader,model_ml_publisher,group_reader,1,0,0,0
+access_model_ml_reader_reader,access_model_ml_reader_reader,model_ml_read,group_reader,0,0,0,0

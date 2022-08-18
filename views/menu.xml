@@ -4,5 +4,11 @@
         <menuitem id="ml_management_menuroot" name="Quản lý thư viện" sequence="5"/>
         <menuitem id="menu_ml_books" name="Sách" action="action_ml_books" parent="ml_management_menuroot"
                   sequence="27"/>
+        <menuitem id="menu_ml_author" name="Tác giả" action="action_ml_author" parent="ml_management_menuroot"
+                  sequence="28"/>
+         <menuitem id="menu_ml_publisher" name="Nhà xuất bản" action="action_ml_publisher" parent="ml_management_menuroot"
+                  sequence="29"/>
+        <menuitem id="menu_ml_reader" name="Độc giả" action="action_ml_reader" parent="ml_management_menuroot"
+                  sequence="30"/>
     </data>
 </odoo>

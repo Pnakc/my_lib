@@ -6,10 +6,9 @@
             <field name="model">ml.books</field>
             <field name="arch" type="xml">
                 <tree string="Sách" default_order="create_date desc">
+                    <field name="book_id"/>
                     <field name="name"/>
-                    <field name="author"/>
-                    <field name="year"/>
-                    <field name="publishing_company"/>
+                    <field name="amount"/>
                 </tree>
             </field>
         </record>
@@ -19,12 +18,20 @@
             <field name="model">ml.books</field>
             <field name="arch" type="xml">
                 <form string="Thông tin sách">
-<!--                    <group>-->
-                        <field name="name"/>
-                        <field name="author"/>
-                        <field name="year"/>
-                        <field name="publishing_company"/>
-<!--                    </group>-->
+                    <sheet>
+                        <group>
+                            <field name="book_id"/>
+                            <field name="name"/>
+                            <field name="author"/>
+                            <field name="year"/>
+                            <field name="type"/>
+                            <field name="publisher"/>
+                            <field name="amount"/>
+                        </group>
+                        <group>
+                            <field name="book_pic" widget="image"/>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
